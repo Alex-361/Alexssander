@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        /* Estilizando a página e inputs */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        // Função para realizar a soma de dois números
+        function somar() {
+            let num1 = parseFloat(document.getElementById("numero1").value); // Obtém o primeiro número e converte para float
+            let num2 = parseFloat(document.getElementById("numero2").value); // Obtém o segundo número e converte para float
+
+            let resultado = num1 + num2; // Realiza a soma dos dois números
+            document.getElementById("resultado").innerText = "Resultado: " + resultado; // Exibe o resultado na página
+        }
+
+        // Função para realizar a subtração de dois números
+        function subtrair() {
+            let num1 = parseFloat(document.getElementById("numero1").value); // Obtém o primeiro número
+            let num2 = parseFloat(document.getElementById("numero2").value); // Obtém o segundo número
+
+            let resultado = num1 - num2; // Realiza a subtração dos dois números
+            document.getElementById("resultado").innerText = "Resultado: " + resultado; // Exibe o resultado na página
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+
+    <!-- Input para o primeiro número -->
+    <input type="number" id="numero1" placeholder="Digite o primeiro número"><br>
+
+    <!-- Input para o segundo número -->
+    <input type="number" id="numero2" placeholder="Digite o segundo número"><br>
+
+    <!-- Botões para realizar soma ou subtração -->
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+
+    <!-- Exibição do resultado -->
+    <p id="resultado">Resultado: </p>
+</body>
+</html>
